@@ -11,21 +11,27 @@ A Server emulator for the game [`Honkai: Star Rail`](https://hsr.hoyoverse.com/e
 
 - [Rust](https://www.rust-lang.org/tools/install)
 
-**NOTE**: Nightly Rust is required to build the project. To install it, first install
-Rust itself, then run the following command:
-
-```sh
-rustup toolchain install nightly
-rustup default nightly
-```
-
 #### Building
+
+##### Manually
 
 ```sh
 git clone https://git.xeondev.com/reversedrooms/RobinSR.git
 cd RobinSR
 cargo install --path gameserver
 cargo install --path sdkserver
+```
+
+##### Using xtasks (use this if stupid)
+
+```sh
+cargo xtask run
+```
+
+##### To run it with automatic recompilation when any Rust files are changed
+
+```sh
+cargo xtask watch
 ```
 
 ### From Pre-built Binaries
@@ -55,8 +61,10 @@ run the following in a terminal:
 ```
 
 ## Connecting
+
 [Get 2.2 beta client](https://bhrpg-prod.oss-accelerate.aliyuncs.com/client/beta/20240322124944_scfGE0xJXlWtoJ1r/StarRail_2.1.51.zip),
-replace [mhypbase.dll](https://git.xeondev.com/reversedrooms/RobinSR/raw/branch/master/mhypbase.dll) file in your game folder, it will redirect game traffic (and also disable in-game censorship)
+replace [mhypbase.dll](https://git.xeondev.com/reversedrooms/RobinSR/raw/branch/master/mhypbase.dll)
+file in your game folder, it will redirect game traffic (and disable in-game censorship)
 
 ## Contributing
 

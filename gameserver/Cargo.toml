@@ -4,6 +4,8 @@ edition = "2021"
 version.workspace = true
 
 [dependencies]
+common.workspace = true
+
 ansi_term.workspace = true
 anyhow.workspace = true
 atomic_refcell.workspace = true

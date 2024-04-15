@@ -1241,7 +1241,7 @@ trait_handler! {
     // SetCurInteractEntityScRsp 1497;
     // SceneCastSkillCsReq 1402;
     StartCocoonStageCsReq 1408;
-    // GetSceneMapInfoCsReq 1470;
+    GetSceneMapInfoCsReq 1470;
     // SceneEntityMoveScRsp 1448;
     // DeactivateFarmElementScRsp 1467;
     // SetCurInteractEntityCsReq 1491;
@@ -1263,7 +1263,7 @@ trait_handler! {
     // GetSpringRecoverDataCsReq 1466;
     // SceneEntityTeleportScRsp 1415;
     // SetClientPausedScRsp 1465;
-    // EnterSceneCsReq 1472;
+    EnterSceneCsReq 1472;
     // GetAllServerPrefsDataScRsp 6148;
     // GetServerPrefsDataCsReq 6162;
     // UpdateServerPrefsDataScRsp 6109;

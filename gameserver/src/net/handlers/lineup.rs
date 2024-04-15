@@ -137,7 +137,8 @@ pub async fn on_quit_lineup_cs_req(session: &PlayerSession, body: &QuitLineupCsR
         .await
 }
 
-fn lineup_avatar(id: u32, slot: u32) -> LineupAvatar {
+#[must_use]
+const fn lineup_avatar(id: u32, slot: u32) -> LineupAvatar {
     LineupAvatar {
         id,
         slot,

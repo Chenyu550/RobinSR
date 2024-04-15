@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+use common::util::load_or_create_config;
 use lazy_static::lazy_static;
 use serde::Deserialize;
 use serde_json::from_str;
@@ -16,25 +17,7 @@ pub struct VersionConfig {
 
 lazy_static! {
     pub static ref INSTANCE: HashMap<String, VersionConfig> = {
-        let local_config = std::path::Path::new("versions.json");
-        let data = if local_config.exists() {
-            std::fs::read_to_string("versions.json").unwrap()
-        } else {
-            let config = dirs::config_dir()
-                .expect("No config directory found")
-                .join("hkrpg-sdkserver");
-
-            std::fs::create_dir_all(&config).unwrap();
-
-            let env = config.join("versions.json");
-
-            if !env.exists() {
-                std::fs::write(&env, DEFAULT_VERSIONS).unwrap();
-            }
-
-            std::fs::read_to_string(&env).unwrap()
-        };
-
+        let data = load_or_create_config("versions.json", DEFAULT_VERSIONS);
         from_str(&data).unwrap()
     };
 }

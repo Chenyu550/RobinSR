@@ -14,7 +14,7 @@ pub async fn query_dispatch() -> String {
         region_list: vec![RegionInfo {
             name: String::from("RobinSR"),
             title: String::from("RobinSR"),
-            env_type: String::from("9"),
+            env_type: String::from("2"),
             dispatch_url: String::from("http://127.0.0.1:21000/query_gateway"),
             ..Default::default()
         }],

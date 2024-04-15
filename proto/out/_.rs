@@ -207,7 +207,7 @@ pub struct Cldjmhdelhn {
     #[prost(uint32, tag = "2")]
     pub monster_id: u32,
     #[prost(uint32, tag = "3")]
-    pub ifjocipnpgd: u32,
+    pub config_id: u32,
     #[prost(uint32, tag = "4")]
     pub world_level: u32,
     #[prost(int64, tag = "5")]
@@ -4549,7 +4549,7 @@ pub struct Acageokchob {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Hgnpppadonl {
     #[prost(enumeration = "Pdgndfeojif", tag = "2")]
-    pub bpodijpdnnk: i32,
+    pub reason: i32,
     #[prost(enumeration = "Leieahhhhmi", tag = "3")]
     pub jdgielljojd: i32,
 }
@@ -4748,7 +4748,7 @@ pub struct Codlhohjmag {
     #[prost(enumeration = "Lcmlaclkndi", tag = "6")]
     pub hfbfdnemjed: i32,
     #[prost(enumeration = "Jgjcjhmakka", tag = "11")]
-    pub bpodijpdnnk: i32,
+    pub reason: i32,
     #[prost(uint32, tag = "15")]
     pub jageglcnmjj: u32,
     #[prost(message, repeated, tag = "3")]
@@ -10955,7 +10955,7 @@ pub struct Cnmoppanlgc {
     #[prost(uint32, tag = "1")]
     pub iabdegkmaom: u32,
     #[prost(uint32, tag = "8")]
-    pub ifjocipnpgd: u32,
+    pub config_id: u32,
     #[prost(uint32, tag = "5")]
     pub ippleljgojk: u32,
     #[prost(message, optional, tag = "14")]
@@ -12593,7 +12593,7 @@ pub struct AnnounceData {
     #[prost(uint32, tag = "3")]
     pub dfbogdogcpp: u32,
     #[prost(uint32, tag = "12")]
-    pub ifjocipnpgd: u32,
+    pub config_id: u32,
     #[prost(string, tag = "6")]
     pub chjojjlobei: ::prost::alloc::string::String,
     #[prost(int64, tag = "14")]
@@ -13530,7 +13530,7 @@ pub struct Ingnmgnigfo {
     #[prost(message, optional, tag = "11")]
     pub mdnlmmamejd: ::core::option::Option<PunkLordBattleRecord>,
     #[prost(enumeration = "PunkLordMonsterInfoNotifyReason", tag = "13")]
-    pub bpodijpdnnk: i32,
+    pub reason: i32,
     #[prost(message, optional, tag = "15")]
     pub basic_info: ::core::option::Option<Cldjmhdelhn>,
 }
@@ -13590,7 +13590,7 @@ pub struct Kjeaaledkib {
     #[prost(int64, tag = "8")]
     pub phhhfhobhmk: i64,
     #[prost(uint32, tag = "5")]
-    pub ifjocipnpgd: u32,
+    pub config_id: u32,
     #[prost(uint32, tag = "3")]
     pub blipenmcnbg: u32,
     #[prost(bool, tag = "4")]
@@ -14035,7 +14035,7 @@ pub struct Mipgopjanij {
     #[prost(message, optional, tag = "3")]
     pub lineup: ::core::option::Option<LineupInfo>,
     #[prost(enumeration = "Mldgocoemih", tag = "1")]
-    pub bpodijpdnnk: i32,
+    pub reason: i32,
     #[prost(message, optional, tag = "9")]
     pub scene: ::core::option::Option<SceneInfo>,
 }
@@ -17196,7 +17196,7 @@ pub struct SceneInfo {
     #[prost(message, repeated, tag = "497")]
     pub chhmmbdhjpg: ::prost::alloc::vec::Vec<Dhkacjhaoid>,
     #[prost(uint32, repeated, tag = "9")]
-    pub phicefeaigb: ::prost::alloc::vec::Vec<u32>,
+    pub lighten_section_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "7")]
     pub env_buff_list: ::prost::alloc::vec::Vec<BuffInfo>,
     #[prost(uint32, tag = "8")]
@@ -17813,7 +17813,7 @@ pub struct Eogjjcbdadn {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Lckgkdehclb {
+pub struct EnterSceneCsReq {
     #[prost(bool, tag = "4")]
     pub bfpgcodlocf: bool,
     #[prost(uint32, tag = "2")]
@@ -17826,7 +17826,7 @@ pub struct Lckgkdehclb {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Ehhfgomdfkd {
+pub struct EnterSceneScRsp {
     #[prost(bool, tag = "9")]
     pub bfpgcodlocf: bool,
     #[prost(bool, tag = "15")]
@@ -17837,11 +17837,11 @@ pub struct Ehhfgomdfkd {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Jdokmmikidp {
+pub struct EnterSceneByServerScNotify {
     #[prost(message, optional, tag = "11")]
     pub lineup: ::core::option::Option<LineupInfo>,
-    #[prost(enumeration = "Ffnhcbelgpd", tag = "8")]
-    pub bpodijpdnnk: i32,
+    #[prost(enumeration = "EnterSceneReason", tag = "8")]
+    pub reason: i32,
     #[prost(message, optional, tag = "15")]
     pub scene: ::core::option::Option<SceneInfo>,
 }
@@ -17859,9 +17859,9 @@ pub struct Bkpebkeapjh {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Fkjoeabiioe {
+pub struct GetSceneMapInfoCsReq {
     #[prost(uint32, repeated, tag = "1")]
-    pub dmkkkfnkofh: ::prost::alloc::vec::Vec<u32>,
+    pub entry_id_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "11")]
     pub entry_id: u32,
     #[prost(bool, tag = "6")]
@@ -17872,20 +17872,20 @@ pub struct Fkjoeabiioe {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Kangcibfhee {
+pub struct MazePropState {
     #[prost(uint32, tag = "15")]
     pub group_id: u32,
     #[prost(uint32, tag = "1")]
-    pub ifjocipnpgd: u32,
+    pub config_id: u32,
     #[prost(uint32, tag = "12")]
     pub state: u32,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Gecjjlmabhp {
+pub struct MazeGroup {
     #[prost(int64, tag = "14")]
-    pub opmnklhfdch: i64,
+    pub modify_time: i64,
     #[prost(uint32, tag = "8")]
     pub group_id: u32,
     #[prost(bool, tag = "5")]
@@ -17896,7 +17896,7 @@ pub struct Gecjjlmabhp {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Gbiimoglajl {
+pub struct ChestInfo {
     #[prost(enumeration = "Kihbdaniehp", tag = "3")]
     pub gommoeicmjg: i32,
     #[prost(uint32, tag = "11")]
@@ -17918,48 +17918,48 @@ pub struct Kbbeoemcdhi {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Fjniajephmj {
+pub struct SceneMapInfo {
     #[prost(uint32, repeated, tag = "13")]
-    pub ojlnmnehgai: ::prost::alloc::vec::Vec<u32>,
+    pub unlock_teleport_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "11")]
     pub aechnhklpkp: ::prost::alloc::vec::Vec<Kbbeoemcdhi>,
     #[prost(message, repeated, tag = "15")]
-    pub cgkfbhoadpc: ::prost::alloc::vec::Vec<Kangcibfhee>,
+    pub maze_prop_list: ::prost::alloc::vec::Vec<MazePropState>,
     #[prost(message, repeated, tag = "6")]
-    pub dcbdhkkkpgd: ::prost::alloc::vec::Vec<Gbiimoglajl>,
+    pub dcbdhkkkpgd: ::prost::alloc::vec::Vec<ChestInfo>,
     #[prost(uint32, tag = "4")]
     pub retcode: u32,
     #[prost(message, repeated, tag = "2")]
-    pub pmolfbcbfpe: ::prost::alloc::vec::Vec<Gecjjlmabhp>,
+    pub pmolfbcbfpe: ::prost::alloc::vec::Vec<MazeGroup>,
     #[prost(uint32, tag = "12")]
     pub entry_id: u32,
     #[prost(uint32, tag = "14")]
-    pub kjlbpaefaff: u32,
+    pub cur_map_entry_id: u32,
     #[prost(uint32, tag = "7")]
     pub cngakkcmonh: u32,
     #[prost(uint32, repeated, tag = "10")]
-    pub phicefeaigb: ::prost::alloc::vec::Vec<u32>,
+    pub lighten_section_list: ::prost::alloc::vec::Vec<u32>,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Cegeebldbke {
+pub struct GetSceneMapInfoScRsp {
     #[prost(uint32, tag = "6")]
     pub entry_id: u32,
     #[prost(uint32, repeated, tag = "3")]
-    pub ojlnmnehgai: ::prost::alloc::vec::Vec<u32>,
+    pub unlock_teleport_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "8")]
-    pub cgkfbhoadpc: ::prost::alloc::vec::Vec<Kangcibfhee>,
+    pub maze_prop_list: ::prost::alloc::vec::Vec<MazePropState>,
     #[prost(uint32, tag = "10")]
-    pub kjlbpaefaff: u32,
+    pub cur_map_entry_id: u32,
     #[prost(message, repeated, tag = "14")]
-    pub dcbdhkkkpgd: ::prost::alloc::vec::Vec<Gbiimoglajl>,
+    pub dcbdhkkkpgd: ::prost::alloc::vec::Vec<ChestInfo>,
     #[prost(uint32, repeated, tag = "9")]
-    pub phicefeaigb: ::prost::alloc::vec::Vec<u32>,
+    pub lighten_section_list: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "13")]
-    pub pmolfbcbfpe: ::prost::alloc::vec::Vec<Gecjjlmabhp>,
+    pub pmolfbcbfpe: ::prost::alloc::vec::Vec<MazeGroup>,
     #[prost(message, repeated, tag = "2")]
-    pub mhefdgcamjl: ::prost::alloc::vec::Vec<Fjniajephmj>,
+    pub scene_map_info: ::prost::alloc::vec::Vec<SceneMapInfo>,
     #[prost(bool, tag = "5")]
     pub dhdoicckifl: bool,
     #[prost(uint32, tag = "4")]
@@ -17970,11 +17970,11 @@ pub struct Cegeebldbke {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Glknjjgjgjn {}
+pub struct SyncServerSceneChangeNotify {}
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Onfclaedboj {
+pub struct GameplayCounterCountDownCsReq {
     #[prost(uint32, tag = "7")]
     pub baokagnfnab: u32,
     #[prost(uint32, tag = "11")]
@@ -17983,16 +17983,16 @@ pub struct Onfclaedboj {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Ppjlpfbfbhd {
+pub struct GameplayCounterCountDownScRsp {
     #[prost(uint32, tag = "13")]
     pub retcode: u32,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Dceecobdeko {
+pub struct GameplayCounterUpdateScNotify {
     #[prost(enumeration = "Oigihagkoib", tag = "14")]
-    pub bpodijpdnnk: i32,
+    pub reason: i32,
     #[prost(uint32, tag = "1")]
     pub baokagnfnab: u32,
     #[prost(uint32, tag = "15")]
@@ -18001,7 +18001,7 @@ pub struct Dceecobdeko {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Lmkkjhdeaph {
+pub struct GameplayCounterRecoverCsReq {
     #[prost(uint32, tag = "1")]
     pub ifmmefaoeoa: u32,
     #[prost(uint32, tag = "6")]
@@ -18010,32 +18010,35 @@ pub struct Lmkkjhdeaph {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Ijpkjflgcgn {
+pub struct GameplayCounterRecoverScRsp {
     #[prost(uint32, tag = "15")]
     pub retcode: u32,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Fhjnibeddad {
+pub struct UpdateFloorSavedValueNotify {
     #[prost(map = "string, int32", tag = "6")]
-    pub mbpmoihjnfi: ::std::collections::HashMap<::prost::alloc::string::String, i32>,
+    pub saved_value_map: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        i32,
+    >,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Nmbdnhoimim {
+pub struct GetUnlockTeleportCsReq {
     #[prost(uint32, repeated, tag = "1")]
-    pub dmkkkfnkofh: ::prost::alloc::vec::Vec<u32>,
+    pub entry_id_list: ::prost::alloc::vec::Vec<u32>,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Pokegknhbga {
+pub struct GetUnlockTeleportScRsp {
     #[prost(uint32, tag = "12")]
     pub retcode: u32,
     #[prost(uint32, repeated, tag = "8")]
-    pub ojlnmnehgai: ::prost::alloc::vec::Vec<u32>,
+    pub unlock_teleport_list: ::prost::alloc::vec::Vec<u32>,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -18051,22 +18054,22 @@ pub struct Gffbkjofnad {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Jnofbbanolk {
+pub struct GroupRefreshInfo {
     #[prost(uint32, tag = "4")]
     pub state: u32,
     #[prost(uint32, tag = "1")]
     pub group_id: u32,
     #[prost(message, repeated, tag = "14")]
     pub fiiciciambe: ::prost::alloc::vec::Vec<Gffbkjofnad>,
-    #[prost(enumeration = "Njdmhcchfdj", tag = "7")]
-    pub kppckepfpce: i32,
+    #[prost(enumeration = "SceneGroupRefreshType", tag = "7")]
+    pub group_refresh_type: i32,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Ljihfeagpcl {
+pub struct SceneGroupRefreshScNotify {
     #[prost(message, repeated, tag = "14")]
-    pub kpfomkdmoce: ::prost::alloc::vec::Vec<Jnofbbanolk>,
+    pub group_refresh_list: ::prost::alloc::vec::Vec<GroupRefreshInfo>,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -18191,7 +18194,7 @@ pub struct Diplgalkehc {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Kkbapmgmmcb {
     #[prost(uint32, repeated, tag = "8")]
-    pub dmkkkfnkofh: ::prost::alloc::vec::Vec<u32>,
+    pub entry_id_list: ::prost::alloc::vec::Vec<u32>,
 }
 #[derive(serde::Serialize, serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -20228,7 +20231,7 @@ pub struct Loldclbcgpd {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Nihdpcfoidb {
     #[prost(uint32, tag = "6")]
-    pub ifjocipnpgd: u32,
+    pub config_id: u32,
     #[prost(uint32, tag = "15")]
     pub group_id: u32,
 }
@@ -35473,44 +35476,32 @@ impl Aggoobcfjlh {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum Ffnhcbelgpd {
-    EnterSceneReasonNone = 0,
-    EnterSceneReasonChallengeTimeout = 1,
-    EnterSceneReasonRogueTimeout = 2,
-    EnterSceneReasonChangeStoryline = 3,
+pub enum EnterSceneReason {
+    None = 0,
+    ChallengeTimeout = 1,
+    RogueTimeout = 2,
+    ChangeStoryline = 3,
 }
-impl Ffnhcbelgpd {
+impl EnterSceneReason {
     /// String value of the enum field names used in the ProtoBuf definition.
     ///
     /// The values are not transformed in any way and thus are considered stable
     /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            Ffnhcbelgpd::EnterSceneReasonNone => "ENTER_SCENE_REASON_NONE",
-            Ffnhcbelgpd::EnterSceneReasonChallengeTimeout => {
-                "ENTER_SCENE_REASON_CHALLENGE_TIMEOUT"
-            }
-            Ffnhcbelgpd::EnterSceneReasonRogueTimeout => {
-                "ENTER_SCENE_REASON_ROGUE_TIMEOUT"
-            }
-            Ffnhcbelgpd::EnterSceneReasonChangeStoryline => {
-                "ENTER_SCENE_REASON_CHANGE_STORYLINE"
-            }
+            EnterSceneReason::None => "ENTER_SCENE_REASON_NONE",
+            EnterSceneReason::ChallengeTimeout => "ENTER_SCENE_REASON_CHALLENGE_TIMEOUT",
+            EnterSceneReason::RogueTimeout => "ENTER_SCENE_REASON_ROGUE_TIMEOUT",
+            EnterSceneReason::ChangeStoryline => "ENTER_SCENE_REASON_CHANGE_STORYLINE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
-            "ENTER_SCENE_REASON_NONE" => Some(Self::EnterSceneReasonNone),
-            "ENTER_SCENE_REASON_CHALLENGE_TIMEOUT" => {
-                Some(Self::EnterSceneReasonChallengeTimeout)
-            }
-            "ENTER_SCENE_REASON_ROGUE_TIMEOUT" => {
-                Some(Self::EnterSceneReasonRogueTimeout)
-            }
-            "ENTER_SCENE_REASON_CHANGE_STORYLINE" => {
-                Some(Self::EnterSceneReasonChangeStoryline)
-            }
+            "ENTER_SCENE_REASON_NONE" => Some(Self::None),
+            "ENTER_SCENE_REASON_CHALLENGE_TIMEOUT" => Some(Self::ChallengeTimeout),
+            "ENTER_SCENE_REASON_ROGUE_TIMEOUT" => Some(Self::RogueTimeout),
+            "ENTER_SCENE_REASON_CHANGE_STORYLINE" => Some(Self::ChangeStoryline),
             _ => None,
         }
     }
@@ -35600,29 +35591,29 @@ impl Oigihagkoib {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum Njdmhcchfdj {
-    SceneGroupRefreshTypeNone = 0,
-    SceneGroupRefreshTypeLoaded = 1,
-    SceneGroupRefreshTypeUnload = 2,
+pub enum SceneGroupRefreshType {
+    None = 0,
+    Loaded = 1,
+    Unload = 2,
 }
-impl Njdmhcchfdj {
+impl SceneGroupRefreshType {
     /// String value of the enum field names used in the ProtoBuf definition.
     ///
     /// The values are not transformed in any way and thus are considered stable
     /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            Njdmhcchfdj::SceneGroupRefreshTypeNone => "SCENE_GROUP_REFRESH_TYPE_NONE",
-            Njdmhcchfdj::SceneGroupRefreshTypeLoaded => "SCENE_GROUP_REFRESH_TYPE_LOADED",
-            Njdmhcchfdj::SceneGroupRefreshTypeUnload => "SCENE_GROUP_REFRESH_TYPE_UNLOAD",
+            SceneGroupRefreshType::None => "SCENE_GROUP_REFRESH_TYPE_NONE",
+            SceneGroupRefreshType::Loaded => "SCENE_GROUP_REFRESH_TYPE_LOADED",
+            SceneGroupRefreshType::Unload => "SCENE_GROUP_REFRESH_TYPE_UNLOAD",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
-            "SCENE_GROUP_REFRESH_TYPE_NONE" => Some(Self::SceneGroupRefreshTypeNone),
-            "SCENE_GROUP_REFRESH_TYPE_LOADED" => Some(Self::SceneGroupRefreshTypeLoaded),
-            "SCENE_GROUP_REFRESH_TYPE_UNLOAD" => Some(Self::SceneGroupRefreshTypeUnload),
+            "SCENE_GROUP_REFRESH_TYPE_NONE" => Some(Self::None),
+            "SCENE_GROUP_REFRESH_TYPE_LOADED" => Some(Self::Loaded),
+            "SCENE_GROUP_REFRESH_TYPE_UNLOAD" => Some(Self::Unload),
             _ => None,
         }
     }
